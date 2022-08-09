@@ -4,7 +4,7 @@ import CoinInfo from "../components/coinInfo/coinInfo"
 
 function HomePage() {
   const [data, setData] = useState()
-  const [qtDays, setQtDays] = useState('7')
+  const [qtDays, setQtDays] = useState(7)
 
   async function getCryptoData() {
     const response = await fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=brl&days=${qtDays}`)
