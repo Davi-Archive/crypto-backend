@@ -1,0 +1,40 @@
+
+.wrapper{
+    background-color: blanchedalmond;
+    padding-top: 0%;
+    display: grid;
+    grid-template-columns: 1fr 10%;
+    grid-template-rows: 10% 25% 65%;
+}
+
+#moedaSelecionada{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10%;
+    font-size: 2rem;
+    box-shadow: 4px 3px #0000004f;
+    background-color: #e8ff7f7a;
+}
+
+.seletorMoeda{
+    padding: 10px;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.grafico{
+    width: 100%;
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    min-width: 1000px;
+}
+.daysInput{
+    grid-row: 1;
+    grid-column: 2;
+}
+.corMoeda{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#065e0b;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
