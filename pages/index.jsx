@@ -4,21 +4,23 @@ import CoinInfo from "../components/coinInfo/coinInfo"
 
 function HomePage() {
   const [data, setData] = useState()
+  const [qtDays, setQtDays] = useState('7')
 
   async function getCryptoData() {
-    const response = await fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=brl&days=7`)
+    const response = await fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=brl&days=${qtDays}`)
     const responseData = await response.json()
     setData(responseData)
   }
 
   useEffect(() => {
     getCryptoData()
-  }, [data])
+  }, [qtDays])
 
   return (
     <Container>
       <h1>BitcoinDev</h1>
       <p>Acompanhe o gráfico da principal cryptomoeda da atualidade.</p>
+      <input type="number" value={qtDays} min={1} onChange={(e) => setQtDays(e.target.value)} />
       <div>
       <CoinInfo prices={data?.prices}
       />
