@@ -6,5 +6,4 @@ A página tem um gráfico que muda as informações de acordo com oque o usuári
 
 
 # crypto-backend
-Integração de frontend e API, aula sejadev
-https://www.youtube.com/watch?v=dd6Sv_Uxbkw
+Integração de frontend e API.
