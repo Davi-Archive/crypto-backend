@@ -60,11 +60,10 @@ function HomePage() {
   return (
     <div className={styles.wrapper}>
       <Container>
-        <h1>BitcoinDev</h1>
-        <p>Acompanhe o gráfico da principal cryptomoeda da atualidade.</p>
+        <p className={styles.titulo}><strong>CryptoGraphic APP</strong> Acompanhe o gráfico das principais cryptomoeda da atualidade. API por <a href="https://www.coingecko.com/" target="_blank">Gecko</a> </p>
         <div className={styles.daysInput}>
           <h3>Atualização de quantos dias?</h3>
-          <input type="number" value={qtDays} min={1} onChange={(e) => setQtDays(e.target.value)} />
+          <input className={styles.inputBoxDays} type="number" value={qtDays} min={1} onChange={(e) => setQtDays(e.target.value)} />
         </div>
         <div className={styles.seletorMoeda}>
          <table>
@@ -73,7 +72,8 @@ function HomePage() {
           <tbody>
           <tr>
               <td>
-          <h3>Qual Moeda?</h3>
+          <h3>Qual moeda deseja ver?</h3>
+          <br />
                </td>
           </tr>
             <tr>

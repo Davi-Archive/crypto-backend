@@ -9,7 +9,7 @@ import Moment from "moment";
 export default function CoinChart({prices}){
     const newData = prices?.map(([data, price]) =>({
         name: Moment(data).format('DD/MM/YYYY - HH:MM'),
-        bitcoin: price
+        moeda: price
     }))
     console.log(newData)
     return (
@@ -20,7 +20,7 @@ export default function CoinChart({prices}){
                 <YAxis domain={['auto', 'auto']} />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="bitcoin" stroke="#8884d8" />
+                <Line type="monotone" dataKey="moeda" stroke="#1400c6" />
             </LineChart>
         </ResponsiveContainer>
 

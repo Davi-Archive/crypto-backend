@@ -1,10 +1,18 @@
-
 .wrapper{
+    padding-left: 5%;
+    width: 100%;
     background-color: blanchedalmond;
     padding-top: 0%;
     display: grid;
-    grid-template-columns: 1fr 10%;
-    grid-template-rows: 10% 25% 65%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+}
+
+.titulo{
+    text-align: center;
+    grid-column: 1 / span 2;
+    grid-row: 1 / 1;
 }
 
 #moedaSelecionada{
@@ -17,24 +25,79 @@
 }
 
 .seletorMoeda{
-    padding: 10px;
+    margin: 10px;
+    padding: 5px;
     grid-column: 2;
     grid-row: 2;
+    border: 3px solid black;
+    border-radius: 5%;
+    background-image: linear-gradient(40deg, #ffb766, #c2edda);
 }
 
 .grafico{
     width: 100%;
-    grid-row: 3;
-    grid-column: 1 / span 2;
+    grid-row: 3 / 3;
+    grid-column: 1 / span 3;
     min-width: 1000px;
+    margin-left: 1%;
 }
 .daysInput{
-    grid-row: 1;
-    grid-column: 2;
+    padding-top: 20%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px;
+    grid-row: 2 / 2;
+    grid-column: 1 / 1;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-image: linear-gradient(140deg, #e8f9fd 20%, #11bce2);
+}
+.inputBoxDays{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 10%;
+    background-image: linear-gradient(140deg, #e8f9fd 1%, #11bce2);
 }
 .corMoeda{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#065e0b;
     font-weight: 800;
     font-size: 1.5rem;
+}
+
+@media (max-width: 900px){
+    .wrapper{
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        width: 100%;
+    }
+    .seletorMoeda{
+        margin: 1%;
+        padding: 0px;
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        width: 90%;
+    }
+    .daysInput{
+        padding-top: 0;
+        font-size: 1rem;
+        margin: 1%;
+        width: 90%;
+        grid-row: 2 / 2;
+        grid-column: 1 / span 2;
+        border-radius: 10%;
+    }
+    .grafico{
+        width: 99%;
+        grid-row: 4 / 4;
+        grid-column: 1 / span 2;
+        min-width: 200px;
+        margin-left: -25px;
+        font-size: 0.5rem;
+    }
 }
