@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import Container from "../components/container/container"
 import CoinInfo from "../components/coinInfo/coinInfo"
-import styles from './index.module.css'
+import styles from './index.module.scss'
 
 function HomePage() {
-  const [data, setData] = useState()
+  const [data, setData] = useState<any>('')
   const [qtDays, setQtDays] = useState(7)
   const [coin, setCoin] = useState('bitcoin')
   const [selectedCoin, setSelectedCoin] = useState(coin)
@@ -63,7 +63,7 @@ function HomePage() {
         <p className={styles.titulo}><strong>CryptoGraphic APP</strong> Acompanhe o gráfico das principais cryptomoeda da atualidade. API por <a href="https://www.coingecko.com/" target="_blank">Gecko</a> </p>
         <div className={styles.daysInput}>
           <h3>Atualização de quantos dias?</h3>
-          <input className={styles.inputBoxDays} type="number" value={qtDays} min={1} onChange={(e) => setQtDays(e.target.value)} />
+          <input className={styles.inputBoxDays} type="number" value={qtDays} min={1} onChange={(e:any) => setQtDays(e.target.value)} />
         </div>
         <div className={styles.seletorMoeda}>
          <table>
@@ -81,7 +81,7 @@ function HomePage() {
                 <input type="radio" name="moeda-tipo"
                 className={styles.coinType} value='bitcoin' onChange={(e) => setCoin(e.target.value)} />Bitcoin
               </td>
-              <td id={styles.moedaSelecionada} rowSpan="4">Moeda = <span className={styles.corMoeda}>{selectedCoin}</span></td>
+              <td id={styles.moedaSelecionada} rowSpan={4}>Moeda = <span className={styles.corMoeda}>{selectedCoin}</span></td>
             </tr>
             <tr>
               <td>

@@ -6,12 +6,11 @@ import Moment from "moment";
     bitcoin: '100000'
 }
 
-export default function CoinChart({prices}){
-    const newData = prices?.map(([data, price]) =>({
+export default function CoinChart({prices}:any){
+    const newData = prices?.map(([data, price]:any) =>({
         name: Moment(data).format('DD/MM/YYYY - HH:MM'),
         moeda: price
     }))
-    console.log(newData)
     return (
         <ResponsiveContainer width="100%" height={300}>
             <LineChart data={newData}>
